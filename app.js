@@ -8,72 +8,19 @@ const $ = (id) => document.getElementById(id);
 // =====================
 // Imágenes libres (Wikimedia Commons)
 // =====================
-const IMG = {
-  arcoHerradura: {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Horseshoe_arches_Mezquita_de_Cordoba.jpg?width=1400",
-    credit: "Wikimedia Commons (CC BY-SA)"
-  },
-  mezquitaInterior: {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/C%C3%B3rdoba_-_Mezquita-Catedral_-_Interior_-_04.jpg?width=1400",
-    credit: "Wikimedia Commons (CC BY-SA)"
-  },
-  mihrab: {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Mezquita_de_C%C3%B3rdoba_-_Mihrab.jpg?width=1400",
-    credit: "Wikimedia Commons"
-  },
-  patioLeones: {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Patio_de_los_Leones_Alhambra_Granada.jpg?width=1400",
-    credit: "Wikimedia Commons"
-  },
-  azulejos: {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Alhambra_tile_patterns.jpg?width=1400",
-    credit: "Wikimedia Commons"
-  },
-  yeseria: {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Alhambra_stucco_details.jpg?width=1400",
-    credit: "Wikimedia Commons"
-  },
-  caligrafia: {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Arabic_calligraphy_on_tile.jpg?width=1400",
-    credit: "Wikimedia Commons"
-  },
-  ceramica: {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Hispano-Moresque_ware_vase.jpg?width=1400",
-    credit: "Wikimedia Commons"
-  },
-  zoco: {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Souk_in_Fez_Morocco.jpg?width=1400",
-    credit: "Wikimedia Commons"
-  },
-  noria: {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Noria_de_la_Albolafia_C%C3%B3rdoba.jpg?width=1400",
-    credit: "Wikimedia Commons"
-  },
-  patioCasa: {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Traditional_courtyard_house_Andalusia.jpg?width=1400",
-    credit: "Wikimedia Commons"
-  },
-  sinagogaCordoba: {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Sinagoga_de_C%C3%B3rdoba_-_interior.jpg?width=1400",
-    credit: "Wikimedia Commons"
-  },
-  aceitunas: {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Olive_harvest.jpg?width=1400",
-    credit: "Wikimedia Commons"
-  },
-  huertoRegadio: {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Irrigation_channel.jpg?width=1400",
-    credit: "Wikimedia Commons"
-  },
-  minarete: {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Giralda_Seville.jpg?width=1400",
-    credit: "Wikimedia Commons"
-  },
-  ataurique: {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Arabesque_ornament_Alhambra.jpg?width=1400",
-    credit: "Wikimedia Commons"
-  }
+const imagenes = {
+  souk: "https://upload.wikimedia.org/wikipedia/commons/b/b4/Souk_von_Fez.JPG",
+  mezquitaInterior: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/C%C3%B3rdoba_-_Mezquita-Catedral_-_Interior_-_04.jpg/1280px-C%C3%B3rdoba_-_Mezquita-Catedral_-_Interior_-_04.jpg",
+  mihrab: "https://upload.wikimedia.org/wikipedia/commons/d/de/Mezquita_de_C%C3%B3rdoba_Mihrab.jpg",
+  alhambraYeseria: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Granada-Alhambra14.jpg/960px-Granada-Alhambra14.jpg",
+  patioLeones: "https://upload.wikimedia.org/wikipedia/commons/3/35/Alhambra_-_Court_of_the_Lions.jpg",
+  alhambraAzulejos: "https://upload.wikimedia.org/wikipedia/commons/f/f7/Tassellatura_alhambra.jpg",
+  alhambraAzulejosDetalle: "https://upload.wikimedia.org/wikipedia/commons/1/12/Alhambra-p3-closeup.jpg",
+  noriaAlbolafia: "https://upload.wikimedia.org/wikipedia/commons/archive/e/ec/20171020190555%21Molino_de_la_Albolafia_-_C%C3%B3rdoba.jpg",
+  patioCordoba: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Patio_Casa_Andalusi.jpg/960px-Patio_Casa_Andalusi.jpg",
+  sinagogaCordoba: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Interior_of_Synagogue_in_Cordoba.JPG"
 };
+
 
 // =====================
 // Utilidades
