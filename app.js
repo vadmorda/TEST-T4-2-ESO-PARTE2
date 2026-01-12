@@ -8,18 +8,20 @@ const $ = (id) => document.getElementById(id);
 // =====================
 // Imágenes libres (Wikimedia Commons)
 // =====================
-const imagenes = {
-  souk: "https://upload.wikimedia.org/wikipedia/commons/b/b4/Souk_von_Fez.JPG",
-  mezquitaInterior: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/C%C3%B3rdoba_-_Mezquita-Catedral_-_Interior_-_04.jpg/1280px-C%C3%B3rdoba_-_Mezquita-Catedral_-_Interior_-_04.jpg",
-  mihrab: "https://upload.wikimedia.org/wikipedia/commons/d/de/Mezquita_de_C%C3%B3rdoba_Mihrab.jpg",
-  alhambraYeseria: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Granada-Alhambra14.jpg/960px-Granada-Alhambra14.jpg",
-  patioLeones: "https://upload.wikimedia.org/wikipedia/commons/3/35/Alhambra_-_Court_of_the_Lions.jpg",
-  alhambraAzulejos: "https://upload.wikimedia.org/wikipedia/commons/f/f7/Tassellatura_alhambra.jpg",
-  alhambraAzulejosDetalle: "https://upload.wikimedia.org/wikipedia/commons/1/12/Alhambra-p3-closeup.jpg",
-  noriaAlbolafia: "https://upload.wikimedia.org/wikipedia/commons/archive/e/ec/20171020190555%21Molino_de_la_Albolafia_-_C%C3%B3rdoba.jpg",
-  patioCordoba: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Patio_Casa_Andalusi.jpg/960px-Patio_Casa_Andalusi.jpg",
-  sinagogaCordoba: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Interior_of_Synagogue_in_Cordoba.JPG"
+const IMG = {
+  zoco: { src: "https://upload.wikimedia.org/wikipedia/commons/b/b4/Souk_von_Fez.JPG", credit: "Wikimedia Commons" },
+  mezquitaInterior: { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/C%C3%B3rdoba_-_Mezquita-Catedral_-_Interior_-_04.jpg/1280px-C%C3%B3rdoba_-_Mezquita-Catedral_-_Interior_-_04.jpg", credit: "Wikimedia Commons" },
+  mihrab: { src: "https://upload.wikimedia.org/wikipedia/commons/d/de/Mezquita_de_C%C3%B3rdoba_Mihrab.jpg", credit: "Wikimedia Commons" },
+  patioLeones: { src: "https://upload.wikimedia.org/wikipedia/commons/3/35/Alhambra_-_Court_of_the_Lions.jpg", credit: "Wikimedia Commons" },
+  azulejos: { src: "https://upload.wikimedia.org/wikipedia/commons/f/f7/Tassellatura_alhambra.jpg", credit: "Wikimedia Commons" },
+  yeseria: { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Granada-Alhambra14.jpg/960px-Granada-Alhambra14.jpg", credit: "Wikimedia Commons" },
+  caligrafia: { src: "https://upload.wikimedia.org/wikipedia/commons/1/17/Arabic_calligraphy_on_tile.jpg", credit: "Wikimedia Commons" },
+  ceramica: { src: "https://upload.wikimedia.org/wikipedia/commons/0/06/Hispano-Moresque_ware_vase.jpg", credit: "Wikimedia Commons" },
+  noria: { src: "https://upload.wikimedia.org/wikipedia/commons/e/ec/Molino_de_la_Albolafia_-_C%C3%B3rdoba.jpg", credit: "Wikimedia Commons" },
+  patioCasa: { src: "https://upload.wikimedia.org/wikipedia/commons/a/a7/Patio_Casa_Andalusi.jpg", credit: "Wikimedia Commons" },
+  sinagogaCordoba: { src: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Interior_of_Synagogue_in_Cordoba.JPG", credit: "Wikimedia Commons" },
 };
+
 
 
 // =====================
