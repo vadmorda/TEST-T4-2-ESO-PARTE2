@@ -283,3 +283,88 @@ function guardarRespuesta() {
 
   if (esMulti(q)) {
     const r = document.querySelector("input[name='resp']:checked");
+    if (!r) return false;
+    respuestasUsuario[orden[indice]] = parseInt(r.value, 10);
+    return true;
+  }
+
+  const v = $("short-answer").value.trim();
+  if (!v) return false;
+  respuestasUsuario[orden[indice]] = v;
+  return true;
+}
+
+function siguiente() {
+  if (!guardarRespuesta()) {
+    alert("Responde antes de continuar 🙂");
+    return;
+  }
+  indice++;
+  (indice >= preguntas.length) ? mostrarResultados() : renderPregunta();
+}
+
+function anterior() {
+  if (indice > 0) { indice--; renderPregunta(); }
+}
+
+function esCorrecta(q, r) {
+  if (r == null) return false;
+  return esMulti(q) ? r === q.correcta : coincideCorta(r, q.respuestas);
+}
+
+function mostrarResultados() {
+  $("test-card").classList.add("hidden");
+  $("result-card").classList.remove("hidden");
+
+  let correctas = 0;
+  let fallos = [];
+
+  preguntas.forEach((q, i) => {
+    const r = respuestasUsuario[i];
+    if (esCorrecta(q, r)) correctas++;
+    else fallos.push({ q, r });
+  });
+
+  const total = preguntas.length;
+  const errores = total - correctas;
+
+  let html = `
+    <h2>Resultados del test</h2>
+    <div class="summary">
+      ✅ Aciertos: <strong>${correctas}</strong> / ${total}<br>
+      ❌ Fallos: <strong>${errores}</strong>
+    </div>
+  `;
+
+  if (fallos.length > 0) {
+    html += `<div class="summary" style="margin-top:12px"><strong>Fallos corregidos</strong>:</div>`;
+    html += `<ul class="list-fails">`;
+    fallos.forEach(({ q, r }) => {
+      const correctaTxt = esMulti(q) ? q.opciones[q.correcta] : q.respuestas[0];
+      html += `
+        <li>
+          <span class="qtitle">${q.es}</span>
+          <span class="line">Tu respuesta: <strong>${r ?? "—"}</strong></span>
+          <span class="line">Correcta: <strong>${correctaTxt}</strong></span>
+          <span class="line">${q.explicacion ?? ""}</span>
+          <span class="pill-mini">Repasar 30s</span>
+        </li>`;
+    });
+    html += `</ul>`;
+  }
+
+  html += `
+    <div class="summary" style="margin-top:14px;text-align:center">
+      <button class="btn btn-primary" onclick="location.reload()">🔁 Volver a practicar</button>
+    </div>
+  `;
+
+  $("result-content").innerHTML = html;
+}
+
+// =====================
+document.addEventListener("DOMContentLoaded", () => {
+  $("btn-prev").addEventListener("click", anterior);
+  $("btn-next").addEventListener("click", siguiente);
+  renderPregunta();
+});
